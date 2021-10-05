@@ -24,4 +24,216 @@ F 3 "https://www.u-blox.com/sites/default/files/SAM-M8Q_DataSheet_%28UBX-1601261
 	1    2950 2775
 	1    0    0    -1  
 $EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 615C8D4D
+P 2950 3275
+F 0 "#PWR0101" H 2950 3025 50  0001 C CNN
+F 1 "GND" H 2955 3102 50  0000 C CNN
+F 2 "" H 2950 3275 50  0001 C CNN
+F 3 "" H 2950 3275 50  0001 C CNN
+	1    2950 3275
+	1    0    0    -1  
+$EndComp
+$Comp
+L RocketScreamKicadLibrary:3V3 #PWR0102
+U 1 1 615C945F
+P 2850 2275
+F 0 "#PWR0102" H 2850 2125 50  0001 C CNN
+F 1 "3V3" H 2855 2448 50  0000 C CNN
+F 2 "" H 2850 2275 60  0000 C CNN
+F 3 "" H 2850 2275 60  0000 C CNN
+	1    2850 2275
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 2775 2000 2775
+$Comp
+L Device:R R1
+U 1 1 615C9F6F
+P 2000 2925
+F 0 "R1" H 2070 2971 50  0000 L CNN
+F 1 "1K" H 2070 2880 50  0000 L CNN
+F 2 "" V 1930 2925 50  0001 C CNN
+F 3 "~" H 2000 2925 50  0001 C CNN
+	1    2000 2925
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 615CA4A4
+P 2000 3075
+F 0 "#PWR0103" H 2000 2825 50  0001 C CNN
+F 1 "GND" H 2005 2902 50  0000 C CNN
+F 2 "" H 2000 3075 50  0001 C CNN
+F 3 "" H 2000 3075 50  0001 C CNN
+	1    2000 3075
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 2275 2850 2275
+Connection ~ 2850 2275
+$Comp
+L Device:Battery_Cell BT1
+U 1 1 615CB1E5
+P 4000 2025
+F 0 "BT1" H 4118 2121 50  0000 L CNN
+F 1 "Battery_Cell" H 4118 2030 50  0000 L CNN
+F 2 "Battery:BatteryHolder_Keystone_1058_1x2032" V 4000 2085 50  0001 C CNN
+F 3 "~" V 4000 2085 50  0001 C CNN
+	1    4000 2025
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 1825 3675 1825
+Wire Wire Line
+	3050 1825 3050 2275
+$Comp
+L Device:C C1
+U 1 1 615CD5CD
+P 3675 1975
+F 0 "C1" H 3790 2021 50  0000 L CNN
+F 1 "C" H 3790 1930 50  0000 L CNN
+F 2 "" H 3713 1825 50  0001 C CNN
+F 3 "~" H 3675 1975 50  0001 C CNN
+	1    3675 1975
+	1    0    0    -1  
+$EndComp
+Connection ~ 3675 1825
+Wire Wire Line
+	3675 1825 3050 1825
+$Comp
+L power:GND #PWR0104
+U 1 1 615CDEE4
+P 3675 2125
+F 0 "#PWR0104" H 3675 1875 50  0001 C CNN
+F 1 "GND" H 3680 1952 50  0000 C CNN
+F 2 "" H 3675 2125 50  0001 C CNN
+F 3 "" H 3675 2125 50  0001 C CNN
+	1    3675 2125
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 615CE1BE
+P 4000 2125
+F 0 "#PWR0105" H 4000 1875 50  0001 C CNN
+F 1 "GND" H 4005 1952 50  0000 C CNN
+F 2 "" H 4000 2125 50  0001 C CNN
+F 3 "" H 4000 2125 50  0001 C CNN
+	1    4000 2125
+	1    0    0    -1  
+$EndComp
+$Comp
+L mysensors_radios:RFM95HW U2
+U 1 1 615D66DF
+P 1750 1400
+F 0 "U2" H 1750 2014 40  0000 C CNN
+F 1 "RFM95HW" H 1750 1938 40  0000 C CNN
+F 2 "RF_Module:HOPERF_RFM9XW_SMD" H 1750 1400 30  0001 C CIN
+F 3 "https://cdn-learn.adafruit.com/assets/assets/000/031/659/original/RFM95_96_97_98W.pdf?1460518717" H 1750 1847 60  0000 C CNN
+	1    1750 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x04_Female J3
+U 1 1 615DA9EE
+P 5550 1250
+F 0 "J3" H 5578 1226 50  0000 L CNN
+F 1 "Conn_01x04_Female" H 5578 1135 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" H 5550 1250 50  0001 C CNN
+F 3 "~" H 5550 1250 50  0001 C CNN
+	1    5550 1250
+	1    0    0    -1  
+$EndComp
+Text Notes 5300 1000 0    50   ~ 0
+ssd1306 oled
+$Comp
+L Connector:Conn_01x06_Female J4
+U 1 1 615E1B8F
+P 5750 2250
+F 0 "J4" H 5778 2226 50  0000 L CNN
+F 1 "Conn_01x06_Female" H 5778 2135 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical" H 5750 2250 50  0001 C CNN
+F 3 "~" H 5750 2250 50  0001 C CNN
+	1    5750 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW1
+U 1 1 615E9717
+P 7450 1625
+F 0 "SW1" H 7450 1910 50  0000 C CNN
+F 1 "SW_Push" H 7450 1819 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_Tactile_SPST_Angled_PTS645Vx58-2LFS" H 7450 1825 50  0001 C CNN
+F 3 "~" H 7450 1825 50  0001 C CNN
+	1    7450 1625
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW2
+U 1 1 615EB759
+P 7425 2075
+F 0 "SW2" H 7425 2360 50  0000 C CNN
+F 1 "SW_Push" H 7425 2269 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_Tactile_SPST_Angled_PTS645Vx58-2LFS" H 7425 2275 50  0001 C CNN
+F 3 "~" H 7425 2275 50  0001 C CNN
+	1    7425 2075
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_Coaxial J5
+U 1 1 615EF508
+P 2325 3975
+F 0 "J5" H 2425 3950 50  0000 L CNN
+F 1 "Conn_Coaxial" H 2425 3859 50  0000 L CNN
+F 2 "Connector_Coaxial:SMA_Molex_73251-1153_EdgeMount_Horizontal" H 2325 3975 50  0001 C CNN
+F 3 " ~" H 2325 3975 50  0001 C CNN
+	1    2325 3975
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Battery_Cell BT2
+U 1 1 6160C21F
+P 7950 3200
+F 0 "BT2" H 8068 3296 50  0000 L CNN
+F 1 "Battery_Cell" H 8068 3205 50  0000 L CNN
+F 2 "Battery:BatteryHolder_Keystone_1042_1x18650" V 7950 3260 50  0001 C CNN
+F 3 "~" V 7950 3260 50  0001 C CNN
+	1    7950 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x14_Female J1
+U 1 1 61641A77
+P 5625 5650
+F 0 "J1" H 5653 5626 50  0000 L CNN
+F 1 "Conn_01x14_Female" H 5653 5535 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x14_P2.54mm_Vertical" H 5625 5650 50  0001 C CNN
+F 3 "~" H 5625 5650 50  0001 C CNN
+	1    5625 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW3
+U 1 1 6164981D
+P 7400 2500
+F 0 "SW3" H 7400 2785 50  0000 C CNN
+F 1 "SW_Push" H 7400 2694 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_Tactile_SPST_Angled_PTS645Vx58-2LFS" H 7400 2700 50  0001 C CNN
+F 3 "~" H 7400 2700 50  0001 C CNN
+	1    7400 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW?
+U 1 1 6164AA87
+P 7450 3000
+F 0 "SW?" H 7450 3285 50  0000 C CNN
+F 1 "SW_Push" H 7450 3194 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_Tactile_SPST_Angled_PTS645Vx58-2LFS" H 7450 3200 50  0001 C CNN
+F 3 "~" H 7450 3200 50  0001 C CNN
+	1    7450 3000
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
